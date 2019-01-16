@@ -28,10 +28,18 @@ ext {
 }
 
 dependencies {
-  compile("org.springframework.boot:spring-boot-starter-actuator")
+  // bootstrap.yml datasource 접근하기 위해 필요
+	implementation 'org.springframework.cloud:spring-cloud-config-client'
+	
+  implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
-  compile('org.springframework.boot:spring-boot-starter-web')
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+  implementation 'org.springframework.boot:spring-boot-starter-hateoas'
+  implementation 'org.springframework.data:spring-data-rest-hal-browser'
+  implementation 'org.springframework.boot:spring-boot-starter-web'
+  implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+  runtime('mysql:mysql-connector-java')
 	compileOnly 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
