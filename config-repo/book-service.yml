@@ -1,8 +1,5 @@
 spring:
   datasource:
-    ##application.yml
-    ##url: jdbc:mysql://localhost:3306/myreact?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=UTC
-    ##bootstrap.yml
     url: jdbc:mysql://localhost:3306/myreact?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=UTC
     #url: jdbc:log4jdbc:mysql://localhost:3306/myreact?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
