@@ -3,13 +3,12 @@ spring:
     ##application.yml
     ##url: jdbc:mysql://localhost:3306/myreact?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=UTC
     ##bootstrap.yml
-    jdbc-url: jdbc:mysql://localhost:3306/myreact?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/myreact?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=UTC
     #url: jdbc:log4jdbc:mysql://localhost:3306/myreact?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: 1234
     #driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-#    driverClassName: net.sf.
-    driverClassName: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
@@ -22,12 +21,6 @@ spring:
     properties:
       hibernate:
         format_sql: true
-  cloud:
-    config:
-      allowOverride: true
-      failFast: true
-      overrideNone: false
-      overrideSystemProperties: false
 
 name:
   first: book1
