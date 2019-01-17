@@ -1,5 +1,5 @@
 zuul:
   routes:
-    book-apigateway:
+    book-service:
       serviceId: book-service
       path: /api/**
