@@ -2,4 +2,7 @@ zuul:
   routes:
     book-service:
       serviceId: book-service
-      path: /api/**
+      path: /api/v1/books/**
+    test-service:
+      serviceId: test-service
+      path: /api/v1/tests/**
